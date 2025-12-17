@@ -80,12 +80,12 @@ Se han definido varias dimensiones para agrupar las variables del dataset:
 
 #  Hecho
 
-<img alt="hecho_analisis_mercado_libros" src="https://github.com/user-attachments/assets/3ce3e6a5-5401-44b5-b9e0-967b5fbb3cf2" />
+<img width="300" alt="hecho" src="https://github.com/user-attachments/assets/b9c8a00d-537f-4f4d-9773-72de49450c34" />
 
 
 # Tabla de Hechos
 
-<img width="300" alt="hecho" src="https://github.com/user-attachments/assets/b9c8a00d-537f-4f4d-9773-72de49450c34" />
+<img width="500" alt="Tabla-hecho" src="https://github.com/user-attachments/assets/4ffaa71d-2f9b-49e8-8eb9-a3626b507837" />
 
 - Se aplican **SCD tipo 1** (slowly changing dimensions): se reemplazan valores antiguos por nuevos, reflejando siempre el estado actual de géneros y premios.  
 - Permite generar reportes orientados a:

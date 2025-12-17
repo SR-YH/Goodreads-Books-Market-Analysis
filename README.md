@@ -100,8 +100,63 @@ De acuerdo con la sección "descripción de variables", los valores nulos detect
 -  Validación de consistencia entre métricas de valoración
 
 # Visualizaciones
-## Distribución de Popularidad (por valoraciones)
 
-## Distribución de Popularidad (por reseñas)
+**Distribución de Popularidad (por valoraciones)**
 
-## Correlación Rating vs Review
+<img width="600" alt="distribucion_libros_popularidad_valoraciones" src="https://github.com/user-attachments/assets/05f4a230-9789-41f6-baaf-b6fd9973a7a6" />
+
+Solo 289 libros superan los 500.000–5.000.000 de valoraciones, por lo que pueden considerarse best-sellers históricos. El máximo de valoraciones es 6.801.077, correspondiente a Harry Potter and the Philosopher’s Stone. La distribución de rating_count está fuertemente sesgada a la derecha. Aunque la media (18.737) es alta, la mediana (2.310) indica que la mayoría de los libros tienen un número moderado de valoraciones. La mayor concentración se encuentra entre 1.000 y 99.000 valoraciones (3.908 libros), seguida por el rango de 100 a 999 (2.148 libros), mientras que los libros con menos de 100 valoraciones son minoritarios (1.551)
+
+**Distribución de Popularidad (por reseñas)**
+
+<img width="600" alt="distribucion_libros_popularidad_resenias" src="https://github.com/user-attachments/assets/9f5cd9d1-e617-4396-9330-069c280af729" />
+
+La mayoría de los libros del conjunto presenta pocas reseñas: casi 4.100 tienen entre 100 y 999, y más de 3.800 cuentan con menos de 100. En contraste, solo 3 libros superan las 100.000 reseñas (The Fault in Our Stars, The Girl on the Train y Harry Potter and the Philosopher’s Stone), lo que evidencia una alta concentración de popularidad en pocos títulos. Este patrón refleja una distribución altamente desigual, donde la atención de los lectores se focaliza en unos pocos libros muy populares, mientras que la mayoría recibe una visibilidad limitada. Además, 289 libros no registran ninguna reseña.
+
+**Correlación Rating vs Review**
+
+<img width="600" alt="heatmap_valor_rese" src="https://github.com/user-attachments/assets/efdb1a6d-db2a-4dfc-91d8-599c57be45cb" />
+
+Los libros con muchas valoraciones suelen tener también muchas reseñas, aunque estos casos son excepcionales. Solo 1 libro supera los 5 millones de valoraciones y 100.000 reseñas, mientras que 2 libros tienen entre 1 y 5 millones de valoraciones con más de 100.000 reseñas, sumando un total de 3 títulos con máxima popularidad en ambas métricas. La mayoría se concentra en rangos medios o bajos: 3.126 libros tienen entre 1.000 y 9.900 valoraciones y entre 100 y 999 reseñas, y 1.279 libros se sitúan en el nivel más bajo para ambas métricas. Además, 13 libros no registran ninguna valoración ni reseña.
+# Modelo Dimensional
+- Tipo de Tabla de Hechos
+Snapshot (Instantánea): Captura el estado de los libros en un momento específico.
+- Granularidad
+Nivel libro-snapshot: Cada registro representa un libro con sus métricas acumuladas.
+- Tasa de Refresco
+Trimestral: Para seguir evolución del mercado.
+- Métricas
+- Diseño de dimensiones
+# Cuadro de Mando
+- Usuario final: Responsable del departamento de Marketing
+- Propósito: Facilita la identificación de libros con alto potencial comercial, géneros preferidos y autores prometedores. Esto permite optimizar campañas, reducir riesgos en inversiones promocionales y anticiparse a las tendencias del mercado.
+- Frecuencia: Actualización trimestral (push) con alertas adicionales si se detectan cambios significativos. También disponible bajo demanda (pull) para consultas específicas.
+- Adopción: Se integrará como herramienta clave en la planificación de campañas, apoyando decisiones estratégicas.
+--------
+
+**Visión General**
+
+<img width="700" alt="Cuadro de mando1" src="https://github.com/user-attachments/assets/ba205221-1bd8-4c90-8af6-5c3efcdc37da" />
+
+**Tendencias de reseñas y valoraciones**
+
+<img width="700" alt="Cuadro de mando2" src="https://github.com/user-attachments/assets/b5a69a54-c2a0-4710-bfab-9ece8d8e7fcb" />
+
+**Editoriales Líderes**
+
+<img width="700" alt="Cuadro de mando3" src="https://github.com/user-attachments/assets/4c0f76ef-2431-45b9-ba2b-94ac43f7e0ec" />
+
+**Preferencias Literarias**
+
+<img width="700" alt="Cuadro de mando4" src="https://github.com/user-attachments/assets/a0b1f108-1734-4feb-bc89-09100ed13ae4" />
+
+**Segmentación Popularidad-Satisfacción**
+
+<img width="700" alt="Cuadro de mando5" src="https://github.com/user-attachments/assets/eb9626b4-9d3d-41dc-b79e-c497f1c2cb95" />
+
+**Caso de éxito**
+
+<img width="700" alt="Cuadro de mand6" src="https://github.com/user-attachments/assets/726d843b-cf6e-4b6c-ac02-76d80859bf8e" />
+
+
+

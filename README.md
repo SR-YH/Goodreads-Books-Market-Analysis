@@ -158,5 +158,6 @@ Trimestral: Para seguir evolución del mercado.
 
 <img width="700" alt="Cuadro de mand6" src="https://github.com/user-attachments/assets/726d843b-cf6e-4b6c-ac02-76d80859bf8e" />
 
-
+#
+Puedes consultar el notebook en Google Colab para más detalles [aquí](https://colab.research.google.com/drive/1qGrlCj0gDfoIv6kngkFtkCD6-ryCg0tK?usp=sharing).
 
